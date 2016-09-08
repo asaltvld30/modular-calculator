@@ -15,6 +15,7 @@ mkdir demo-dist/plugins
 # copy artifacts to demo-dist folder
 cp -r app/target/pf4j-*/* demo-dist/
 cp plugins/plugin1/target/pf4j*.zip demo-dist/plugins/
+cp plugins/plugin3/target/pf4j*.zip demo-dist/plugins/
 
 # run demo
 cd demo-dist

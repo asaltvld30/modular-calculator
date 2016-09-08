@@ -81,6 +81,7 @@
     <modules>
         <module>plugin1</module>
         <module>plugin2</module>
+        <module>plugin3</module>
     </modules>
 
     <dependencies>
