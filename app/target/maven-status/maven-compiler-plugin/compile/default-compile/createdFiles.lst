@@ -1,0 +1,4 @@
+META-INF/extensions.idx
+ro/fortsoft/pf4j/demo/WhazzupGreeting.class
+ro/fortsoft/pf4j/demo/HowdyGreeting.class
+ro/fortsoft/pf4j/demo/Boot.class
