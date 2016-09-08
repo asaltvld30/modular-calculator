@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/api/pf4j-demo-api.iml" filepath="$PROJECT_DIR$/api/pf4j-demo-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/pf4j-demo-app.iml" filepath="$PROJECT_DIR$/app/pf4j-demo-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pf4j-demo-parent.iml" filepath="$PROJECT_DIR$/pf4j-demo-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plugins/plugin1/pf4j-demo-plugin1.iml" filepath="$PROJECT_DIR$/plugins/plugin1/pf4j-demo-plugin1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plugins/plugin2/pf4j-demo-plugin2.iml" filepath="$PROJECT_DIR$/plugins/plugin2/pf4j-demo-plugin2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plugins/pf4j-demo-plugins.iml" filepath="$PROJECT_DIR$/plugins/pf4j-demo-plugins.iml" />
+    </modules>
+  </component>
+</project>

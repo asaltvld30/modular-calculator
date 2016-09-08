@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>ro.fortsoft.pf4j.demo</groupId>
+    <artifactId>pf4j-demo-parent</artifactId>
+    <version>1.2.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>Demo Parent</name>
+
+    <properties>
+        <javadoc.disabled>true</javadoc.disabled>
+        <deploy.disabled>true</deploy.disabled>
+        <source.disabled>true</source.disabled>
+        <pf4j.version>1.1.0</pf4j.version>
+    </properties>
+
+    <build>
+        <resources>
+            <resource>
+                <filtering>false</filtering>
+                <directory>src/main/java</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
+    </build>
+
+    <modules>
+        <module>app</module>
+        <module>api</module>
+        <module>plugins</module>
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>ro.fortsoft.pf4j</groupId>
+            <artifactId>pf4j</artifactId>
+            <version>${pf4j.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>
