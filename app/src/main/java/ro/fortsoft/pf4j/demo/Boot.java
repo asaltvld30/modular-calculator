@@ -18,12 +18,19 @@ package ro.fortsoft.pf4j.demo;
 import java.util.List;
 import java.util.Set;
 
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import org.apache.commons.lang.StringUtils;
 
+import org.apache.commons.lang.exception.ExceptionUtils;
 import ro.fortsoft.pf4j.DefaultPluginManager;
 import ro.fortsoft.pf4j.PluginManager;
 import ro.fortsoft.pf4j.PluginWrapper;
 import ro.fortsoft.pf4j.demo.api.Greeting;
+import ro.fortsoft.pf4j.demo.api.LabelExtensionPoint;
 import ro.fortsoft.pf4j.demo.api.Operation;
 
 /**
@@ -31,40 +38,24 @@ import ro.fortsoft.pf4j.demo.api.Operation;
  *
  * @author Decebal Suiu
  */
-public class Boot {
+public class Boot extends Application {
+
+
+    public void start(Stage primaryStage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/sample.fxml"));
+        primaryStage.setTitle("Hello World");
+        primaryStage.setScene(new Scene(root, 600, 600));
+        primaryStage.show();
+
+
+    }
 
     public static void main(String[] args) {
-        // print logo
-        printLogo();
-
+        launch(args);
         // create the plugin manager
-        final PluginManager pluginManager = new DefaultPluginManager();
-
-        // load the plugins
-        pluginManager.loadPlugins();
-
-        // enable a disabled plugin
-//        pluginManager.enablePlugin("welcome-plugin");
-
-        // start (active/resolved) the plugins
-        pluginManager.startPlugins();
-
-//        // retrieves the extensions for Greeting extension point
-//        List<Greeting> greetings = pluginManager.getExtensions(Greeting.class);
-//        System.out.println(String.format("Found %d extensions for extension point '%s'", greetings.size(), Greeting.class.getName()));
-//        for (Greeting greeting : greetings) {
-//            System.out.println(">>> " + greeting.getGreeting());
-//        }
 
 
-        List<Operation> operations = pluginManager.getExtensions(Operation.class);
 
-        System.out.println("Am aici o operatie" + operations.size());
-        for (Operation operation: operations) {
-            System.out.println(operation.compute(3, 4));
-        }
-        // stop the plugins
-        pluginManager.stopPlugins();
         /*
         Runtime.getRuntime().addShutdownHook(new Thread() {
 
@@ -76,11 +67,4 @@ public class Boot {
         });
         */
     }
-
-	private static void printLogo() {
-    	System.out.println(StringUtils.repeat("#", 40));
-    	System.out.println(StringUtils.center("PF4J-DEMO", 40));
-    	System.out.println(StringUtils.repeat("#", 40));
-	}
-
 }

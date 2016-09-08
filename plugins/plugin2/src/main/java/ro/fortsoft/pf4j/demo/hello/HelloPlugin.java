@@ -44,8 +44,7 @@ public class HelloPlugin extends Plugin {
     @Extension(ordinal=1)
     public static class HelloGreeting implements Greeting {
 
-    	@Override
-        public String getGreeting() {
+            public String getGreeting() {
             return "Hello";
         }
 

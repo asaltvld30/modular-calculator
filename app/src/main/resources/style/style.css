@@ -1,0 +1,64 @@
+@font-face {
+    -fx-font-family: 'Lato';
+    -fx-font-weight: normal;
+    -fx-font-style: normal;
+    src: url('/lato/lato-regular.ttf');
+}
+.root {
+    -fx-background-color: white;
+    -fx-font-family: "Lato", Helvetica, Arial, sans-serif;
+    -fx-font-size: 14px;
+}
+
+#login-form #welcome-text {
+    -fx-font-size: 40px;
+    -fx-text-fill: deeppink;
+    -fx-font-weight: bolder;
+}
+
+#login-form .label {
+    -fx-font-size: 14px;
+    -fx-font-family: cursive;
+    -fx-text-fill: #334455;
+}
+
+#login-form .text-field {
+    -fx-background-color: white;
+    -fx-background-radius: 0px;
+    -fx-border-color: #bdc3c7;
+    -fx-border-radius: 6px;
+    -fx-border-width: 2px;
+    -fx-border-style: solid;
+    -fx-padding: 10px 12px;
+    -fx-pref-height: 42px;
+    -fx-font-size: 15px;
+    -fx-font-family: "Lato", Helvetica, Arial, sans-serif;
+    -fx-text-fill: #34495e;
+}
+
+#login-form .text-field:focused {
+    -fx-border-color: #2ecc71;
+}
+
+#login-form .button {
+    -fx-background-color: #1abc9c;
+    -fx-background-radius: 6px;
+    -fx-border-width: 0px;
+    -fx-border-radius: 6px;
+    -fx-text-fill: white;
+    -fx-text-alignment: center;
+    -fx-font-weight: 400;
+    -fx-font-size: 18px;
+    -fx-font-family: "Lato";
+    -fx-padding: 10px 19px;
+    -fx-min-width: 150px;
+}
+
+#login-form .button:hover {
+    -fx-cursor: hand;
+    -fx-background-color: #48c9b0;
+}
+
+#login-form .button:pressed {
+    -fx-background-color: #16a085;
+}

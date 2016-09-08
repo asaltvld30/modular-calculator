@@ -8,3 +8,5 @@ app/target/
 plugins/plugin1/target/
 plugins/plugin2/target/
 plugins/plugin3/target/
+plugins/plugin4/target/
+demo-dist/
